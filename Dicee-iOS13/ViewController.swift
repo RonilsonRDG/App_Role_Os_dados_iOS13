@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //IBOutlet permite fazer referencias a um elemtno de design do meu Storyboard
+    @IBOutlet weak var diceImageView1: UIImageView!
+    @IBOutlet weak var diceImageView2: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //Permite substituir as iagens dos elementos de imagem quando a aplicação foi carregada
+        diceImageView1.image = #imageLiteral(resourceName: "DiceSix")
+        diceImageView2.image = #imageLiteral(resourceName: "DiceTwo")
+        
+        //diceImageView1.alpha = 0.4
     }
 
 

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,13 +16,115 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Gbg-GZ-z9Z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0ms-6L-vAc">
+                                <rect key="frame" x="87" y="115" width="240" height="128"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="aIy-BH-FEM">
+                                <rect key="frame" x="87" y="321" width="100" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="9BA-UO-pk1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogy-34-WKx">
+                                <rect key="frame" x="98" y="693" width="218" height="61"/>
+                                <color key="backgroundColor" red="0.60685610769999998" green="0.1121077612" blue="0.1207309887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="loD-Mp-LYn"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Rolar os Dados">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-wP-CIh">
+                                <rect key="frame" x="124" y="498" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gux-cP-eA3">
+                                <rect key="frame" x="124" y="544" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JuE-SE-woP">
+                                <rect key="frame" x="124" y="591" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esquerdo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWU-U9-12G">
+                                <rect key="frame" x="194" y="500" width="100" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpm-vI-hjW">
+                                <rect key="frame" x="194" y="546" width="70" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ambos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvv-me-Qdg">
+                                <rect key="frame" x="194" y="593" width="70" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="95f-9u-xWl">
+                                <rect key="frame" x="236" y="321" width="100" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Zsi-KB-Yky"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nvv-me-Qdg" firstAttribute="leading" secondItem="JuE-SE-woP" secondAttribute="trailing" constant="21" id="1zo-b2-KCR"/>
+                            <constraint firstItem="0ms-6L-vAc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="62Q-cW-AFv"/>
+                            <constraint firstItem="aIy-BH-FEM" firstAttribute="leading" secondItem="0ms-6L-vAc" secondAttribute="leading" id="6I0-Me-zZy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ogy-34-WKx" secondAttribute="bottom" constant="108" id="FMR-id-EQm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hpm-vI-hjW" secondAttribute="trailing" constant="150" id="Fe2-B6-aKE"/>
+                            <constraint firstItem="Gbg-GZ-z9Z" firstAttribute="centerX" secondItem="ogy-34-WKx" secondAttribute="centerX" id="HKo-aP-FqX"/>
+                            <constraint firstItem="Hpm-vI-hjW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eWU-U9-12G" secondAttribute="leading" id="I2Y-Kt-GS7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="95f-9u-xWl" secondAttribute="trailing" constant="78" id="KPf-4C-n19"/>
+                            <constraint firstItem="aIy-BH-FEM" firstAttribute="top" secondItem="0ms-6L-vAc" secondAttribute="bottom" constant="78" id="Kp5-zv-8iO"/>
+                            <constraint firstItem="JuE-SE-woP" firstAttribute="centerY" secondItem="Nvv-me-Qdg" secondAttribute="centerY" id="N4b-at-Ifa"/>
+                            <constraint firstItem="Gbg-GZ-z9Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQn-nG-DpR"/>
+                            <constraint firstItem="Gmo-wP-CIh" firstAttribute="top" secondItem="aIy-BH-FEM" secondAttribute="bottom" constant="57" id="WiW-2E-7YY"/>
+                            <constraint firstItem="aIy-BH-FEM" firstAttribute="bottom" secondItem="95f-9u-xWl" secondAttribute="bottom" id="XaV-w0-LDE"/>
+                            <constraint firstItem="Gbg-GZ-z9Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="Znd-8x-bzY"/>
+                            <constraint firstItem="JuE-SE-woP" firstAttribute="leading" secondItem="Gmo-wP-CIh" secondAttribute="leading" id="aal-zT-wKk"/>
+                            <constraint firstItem="Hpm-vI-hjW" firstAttribute="top" secondItem="eWU-U9-12G" secondAttribute="bottom" constant="19" id="d3m-qt-NhT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eWU-U9-12G" secondAttribute="trailing" constant="120" id="dfn-1O-zMY"/>
+                            <constraint firstItem="Gbg-GZ-z9Z" firstAttribute="centerX" secondItem="0ms-6L-vAc" secondAttribute="centerX" id="dha-4q-5a5"/>
+                            <constraint firstItem="Hpm-vI-hjW" firstAttribute="trailing" secondItem="Nvv-me-Qdg" secondAttribute="trailing" id="enf-gZ-mKa"/>
+                            <constraint firstItem="Hpm-vI-hjW" firstAttribute="centerY" secondItem="gux-cP-eA3" secondAttribute="centerY" id="gxP-0y-iBo"/>
+                            <constraint firstItem="Gbg-GZ-z9Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iPf-3w-3Wg"/>
+                            <constraint firstItem="Hpm-vI-hjW" firstAttribute="leading" secondItem="Nvv-me-Qdg" secondAttribute="leading" id="o4r-2t-b8g"/>
+                            <constraint firstItem="JuE-SE-woP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="oiK-2G-Xdz"/>
+                            <constraint firstItem="JuE-SE-woP" firstAttribute="top" secondItem="gux-cP-eA3" secondAttribute="bottom" constant="16" id="qhG-Qp-rwT"/>
+                            <constraint firstItem="ogy-34-WKx" firstAttribute="top" secondItem="JuE-SE-woP" secondAttribute="bottom" constant="71" id="seY-Qh-6m4"/>
+                            <constraint firstItem="Gbg-GZ-z9Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vCi-Un-q8P"/>
+                            <constraint firstItem="0ms-6L-vAc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="vaG-2a-c4L"/>
+                            <constraint firstItem="aIy-BH-FEM" firstAttribute="top" secondItem="95f-9u-xWl" secondAttribute="top" id="xFw-Nw-76Y"/>
+                            <constraint firstItem="JuE-SE-woP" firstAttribute="leading" secondItem="gux-cP-eA3" secondAttribute="leading" id="ybO-rq-tRd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceImageView1" destination="aIy-BH-FEM" id="Czb-Sn-hQN"/>
+                        <outlet property="diceImageView2" destination="95f-9u-xWl" id="cY6-Dk-x3f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DiceOne" width="100" height="100"/>
+        <image name="DiceeLogo" width="196" height="128"/>
+        <image name="GreenBackground" width="444.66665649414062" height="414.33334350585938"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

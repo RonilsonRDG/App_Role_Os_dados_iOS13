@@ -21,9 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Permite substituir as iagens dos elementos de imagem quando a aplicação foi carregada
-        diceImageView1.image = #imageLiteral(resourceName: "DiceSix")
-        diceImageView2.image = #imageLiteral(resourceName: "DiceTwo")
+
         leftController.isOn = false
         rightController.isOn = false
         allController.isOn = true
@@ -43,8 +41,17 @@ class ViewController: UIViewController {
     
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        diceImageView1.image = #imageLiteral(resourceName: "DiceFour")
-        diceImageView2.image = #imageLiteral(resourceName: "DiceFour")
+        var leftDiceNumber = arc4random_uniform(5)
+        var rightDiceNumber = arc4random_uniform(5)
+        
+        if leftController.isOn {
+            diceImageView1.image =  [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][Int(leftDiceNumber)]
+        } else if rightController.isOn{
+            diceImageView2.image =  [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][Int(rightDiceNumber)]
+        } else if allController.isOn {
+            diceImageView1.image =  [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][Int(leftDiceNumber)]
+            diceImageView2.image =  [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][Int(rightDiceNumber)]
+        }
     }
     
     

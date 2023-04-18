@@ -40,15 +40,27 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Rolar os Dados">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jhh-nh-40Q"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-wP-CIh">
                                 <rect key="frame" x="124" y="498" width="51" height="31"/>
+                                <connections>
+                                    <action selector="leftControllerPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="W6t-GZ-XFl"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gux-cP-eA3">
                                 <rect key="frame" x="124" y="544" width="51" height="31"/>
+                                <connections>
+                                    <action selector="rightControllerPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="y4R-XT-TA3"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JuE-SE-woP">
                                 <rect key="frame" x="124" y="591" width="51" height="31"/>
+                                <connections>
+                                    <action selector="allControllerPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="ywh-aZ-aNY"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esquerdo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWU-U9-12G">
                                 <rect key="frame" x="194" y="500" width="100" height="27"/>
@@ -110,8 +122,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allController" destination="JuE-SE-woP" id="4Wc-Hw-IHa"/>
                         <outlet property="diceImageView1" destination="aIy-BH-FEM" id="Czb-Sn-hQN"/>
                         <outlet property="diceImageView2" destination="95f-9u-xWl" id="cY6-Dk-x3f"/>
+                        <outlet property="leftController" destination="Gmo-wP-CIh" id="LQj-bh-mkQ"/>
+                        <outlet property="rightController" destination="gux-cP-eA3" id="8NJ-hb-pev"/>
+                        <outlet property="rollButton" destination="ogy-34-WKx" id="1nF-Tj-PAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
